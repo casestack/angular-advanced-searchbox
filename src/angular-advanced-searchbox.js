@@ -1,4 +1,4 @@
-/*! 
+/*!
  * angular-advanced-searchbox
  * https://github.com/dnauck/angular-advanced-searchbox
  * Copyright (c) 2015 Nauck IT KG http://www.nauck-it.de/
@@ -130,7 +130,7 @@ angular.module('angular-advanced-searchbox', [])
                     $scope.removeAll = function() {
                         $scope.searchParams.length = 0;
                         $scope.searchQuery = '';
-                        
+
                         $scope.model = {};
                     };
 
@@ -233,7 +233,7 @@ angular.module('angular-advanced-searchbox', [])
                             });
 
                             changeBuffer.length = 0;
-                        }, 500);
+                        }, 100);
                     }
 
                     function getCurrentCaretPosition(input) {
