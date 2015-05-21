@@ -233,7 +233,7 @@ angular.module('angular-advanced-searchbox', [])
                             });
 
                             changeBuffer.length = 0;
-                        }, 100);
+                        }, 500);
                     }
 
                     function getCurrentCaretPosition(input) {
