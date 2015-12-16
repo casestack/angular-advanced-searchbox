@@ -14,6 +14,9 @@
                 <oi-select
                     name="searchbox"
                     class="search-parameter-input"
+                    nit-set-focus="searchParam.editMode"
+                    ng-keydown="keydown($event, $index)"
+                    ng-blur="leaveEditMode($index)"
                     ng-model="searchParam.value"
                     ng-if="searchParam.editMode && searchParam.options"
                     ng-change="searchParamValueChanged(searchParam)"
