@@ -26,6 +26,7 @@ angular.module('angular-advanced-searchbox', [])
 
                     $scope.placeholder = $attrs.placeholder || 'Search ...';
                     $scope.searchParams = [];
+                    $scope.testing = ["hey", "you"];
                     $scope.searchQuery = '';
                     $scope.setSearchFocus = false;
                     var searchThrottleTimer;
@@ -110,7 +111,8 @@ angular.module('angular-advanced-searchbox', [])
                                 name: searchParam.name,
                                 placeholder: searchParam.placeholder,
                                 value: value || '',
-                                editMode: enterEditModel
+                                editMode: enterEditModel,
+                                options: searchParam.options
                             }
                         );
 
