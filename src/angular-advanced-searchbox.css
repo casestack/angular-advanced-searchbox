@@ -89,10 +89,16 @@
     .advancedSearchBox .search-parameter .value oi-select .select-search .select-search-list {
         width: 150px;
         height: 23px;
+        padding: 0;
     }
 
     .advancedSearchBox .search-parameter .value oi-select .select-search:after {
         margin-top: -15px;
+    }
+
+    .advancedSearchBox .search-parameter .value oi-select .select-search .select-search-list li {
+        padding: 0;
+        margin: 0 4px;
     }
 
 
