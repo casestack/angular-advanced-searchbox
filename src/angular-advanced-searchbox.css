@@ -45,7 +45,8 @@
             box-shadow: 0 3px 3px rgba(0,0,0,0.2);
         }
 
-        .advancedSearchBox .search-parameter div {
+        .advancedSearchBox .search-parameter .key,
+        .advancedSearchBox .search-parameter .value {
             float: left;
             margin: 0 2px;
         }
