@@ -108,6 +108,7 @@ angular.module('angular-advanced-searchbox', [])
                             {
                                 key: searchParam.key,
                                 name: searchParam.name,
+                                display: searchParam.display,
                                 placeholder: searchParam.placeholder,
                                 value: value || '',
                                 editMode: enterEditModel,

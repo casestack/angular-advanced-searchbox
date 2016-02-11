@@ -21,7 +21,7 @@
                     ng-if="searchParam.editMode && searchParam.options"
                     ng-change="searchParamValueChanged(searchParam)"
                     placeholder="{{searchParam.placeholder}}"
-                    oi-options="{{searchParam.optionsTemplate}}"></oi-select>
+                    oi-options="item.name group by item.type for (key, item) in searchParam.options($query, $selectedAs)"></oi-select>
                 <input name="value"
                        type="text"
                        nit-auto-size-input
