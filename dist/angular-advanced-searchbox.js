@@ -261,6 +261,17 @@ angular.module('angular-advanced-searchbox', [])
             ]
         };
     })
+    .directive('csOiSelectWrapper', ['$compile', function ($compile) {
+        return {
+            restrict: 'E',
+            link: function (scope, elem, attrs, controller) {
+                // oi-select expects hard coded string for oi-options, will not work if bound
+                var optionsTemplate = scope.searchParam.optionsTemplate;
+                var compiled = $compile('<oi-select name="searchbox" class="search-parameter-input" nit-set-focus="searchParam.editMode" ng-keydown="keydown($event, $index)" ng-blur="leaveEditMode($index)" ng-model="searchParam.value" ng-if="searchParam.editMode && searchParam.options" ng-change="searchParamValueChanged(searchParam)" placeholder="{{searchParam.placeholder}}" oi-options="' + optionsTemplate + '"></oi-select>')(scope);
+                elem.append(compiled);
+            }
+        };
+    }])
     .directive('nitSetFocus', [
         '$timeout', '$parse',
         function($timeout, $parse) {
