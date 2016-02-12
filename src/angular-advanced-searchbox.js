@@ -59,6 +59,14 @@ angular.module('angular-advanced-searchbox', [])
                         });
                     }, true);
 
+                    $scope.getOptionsLabel = function (param) {
+                        if (param.optionsTemplate) {
+                            return "oi-options='" + param.optionsTemplate + "'";
+                        } else {
+                            return "";
+                        }
+                    };
+
                     $scope.searchParamValueChanged = function (param) {
                         updateModel('change', param.key, param.value);
                     };
