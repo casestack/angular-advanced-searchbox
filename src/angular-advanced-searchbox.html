@@ -21,7 +21,7 @@
                     ng-if="searchParam.editMode && searchParam.options"
                     ng-change="searchParamValueChanged(searchParam)"
                     placeholder="{{searchParam.placeholder}}"
-                    ng-bind-html="getOptionsLabel(searchParam)"></oi-select>
+                    oi-options="{{searchParam.optionsTemplate}}"></oi-select>
                 <input name="value"
                        type="text"
                        nit-auto-size-input
